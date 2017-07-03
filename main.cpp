@@ -7,6 +7,10 @@ using namespace std;
 int main() {
    AutoData Car;
    
+   Car.set_name();
+   Car.get_name();
+   Car.set_model();
+   Car.get_model();
    Car.set_date();
    Car.get_date();
    Car.set_color();
