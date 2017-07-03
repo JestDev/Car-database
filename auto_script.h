@@ -14,11 +14,37 @@ protected:
     string color;
     float engine_volume;
     int doors;
+    string name;
+    string model;
+};
+
+class AutoData : public Auto {
 public:
+    string c_color;
+    string n_name;
+    string m_model;
+    float e_engine_volume;
+    int d_doors;
     int date_year;
     int date_month;
     int date_day;
-
+    
+    void set_name () {
+        cout << "Car name: ";
+        cin >> n_name;
+        cout << endl;
+    }
+    
+    void get_name () {
+        name = n_name;
+    }
+    
+    void set_model () {
+        cout << "Car model: ";
+        cin >> m_model;
+        cout << endl;
+    }
+    
     void set_date () {
         cout << "Year: ";
         cin >> date_year;
@@ -39,13 +65,6 @@ public:
         day = date_day;
     }
 };
-
-class AutoData : public Auto {
-public:
-    string c_color;
-    float e_engine_volume;
-    int d_doors;
-
     void set_color () {
         cout << "Color of your car: ";
         cin >> c_color;
@@ -78,6 +97,7 @@ public:
 
     void data () {
         cout << "Some info about your car:" << endl;
+        cout << "Name: " << name << ", model: " << model << endl;
         cout << "This car made on " << year << "." << month << "." << day << endl;
         cout << "Color: " << color << endl;
         cout << "Engine volume: " << engine_volume << endl;
